@@ -1,0 +1,27 @@
+!SESSION 2024-04-02 19:48:47.718 -----------------------------------------------
+eclipse.buildId=Version 1.14.1
+java.version=17.0.8.1
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2024-04-02 19:49:19.888
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2024-04-02 19:49:19.895
+!MESSAGE Log4j2 initialized with config file C:\Users\tjdtj\OneDrive\Documents\GitHub\Practice-STM32-UART-Bluetooth\target\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2024-04-02 19:49:23.389
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-04-02 19:50:52.042
+!MESSAGE Indexed 'bluetooth' (3 sources, 53 headers) in 1.27 sec: 1,950 declarations; 2,832 references; 0 unresolved inclusions; 2 syntax errors; 2 unresolved names (0.042%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-04-02 19:51:58.888
+!MESSAGE Indexed 'bluetooth' (3 sources, 53 headers) in 0.237 sec: 1,950 declarations; 2,831 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.042%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-04-02 19:52:02.812
+!MESSAGE Indexed 'bluetooth' (3 sources, 53 headers) in 0.216 sec: 1,950 declarations; 2,831 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.042%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-04-02 19:52:04.385
+!MESSAGE Indexed 'bluetooth' (3 sources, 53 headers) in 0.223 sec: 1,950 declarations; 2,831 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.042%)
