@@ -1,0 +1,69 @@
+21:38:22 **** Build of configuration Debug for project bluetooth ****
+make -j12 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f407vgtx.d" -MT"Startup/startup_stm32f407vgtx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Startup/startup_stm32f407vgtx.o" "../Startup/startup_stm32f407vgtx.s"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/stm32f407xx_gpio_drvier.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/stm32f407xx_gpio_drvier.d" -MT"Src/stm32f407xx_gpio_drvier.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/stm32f407xx_gpio_drvier.o"
+arm-none-eabi-gcc "../Src/stm32f407xx_usart_driver.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/stm32f407xx_usart_driver.d" -MT"Src/stm32f407xx_usart_driver.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/stm32f407xx_usart_driver.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/sysmem.o"
+../Src/stm32f407xx_usart_driver.c:9:17: error: unknown type name 'USART_Handle_t'
+    9 | void USART_Init(USART_Handle_t *pUSARTHandle)
+      |                 ^~~~~~~~~~~~~~
+make: *** [Src/subdir.mk:31: Src/stm32f407xx_usart_driver.o] Error 1
+make: *** Waiting for unfinished jobs....
+In file included from ../Inc/stm32f407xx_gpio_driver.h:9,
+                 from ../Src/stm32f407xx_gpio_drvier.c:6:
+../Inc/stm32f407xx.h:614:10: fatal error: stm32f407xx_spi_driver.h: No such file or directory
+  614 | #include "stm32f407xx_spi_driver.h"
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [Src/subdir.mk:31: Src/stm32f407xx_gpio_drvier.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+21:38:38 **** Incremental Build of configuration Debug for project bluetooth ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/stm32f407xx_gpio_drvier.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/stm32f407xx_gpio_drvier.d" -MT"Src/stm32f407xx_gpio_drvier.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/stm32f407xx_gpio_drvier.o"
+arm-none-eabi-gcc "../Src/stm32f407xx_usart_driver.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/stm32f407xx_usart_driver.d" -MT"Src/stm32f407xx_usart_driver.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/stm32f407xx_usart_driver.o"
+../Src/stm32f407xx_usart_driver.c:9:17: error: unknown type name 'USART_Handle_t'
+    9 | void USART_Init(USART_Handle_t *pUSARTHandle)
+      |                 ^~~~~~~~~~~~~~
+In file included from ../Inc/stm32f407xx_gpio_driver.h:9,
+                 from ../Src/stm32f407xx_gpio_drvier.c:6:
+../Inc/stm32f407xx.h:614:10: fatal error: stm32f407xx_spi_driver.h: No such file or directory
+  614 | #include "stm32f407xx_spi_driver.h"
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [Src/subdir.mk:31: Src/stm32f407xx_usart_driver.o] Error 1
+make: *** Waiting for unfinished jobs....
+make: *** [Src/subdir.mk:31: Src/stm32f407xx_gpio_drvier.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+21:39:28 **** Incremental Build of configuration Debug for project bluetooth ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/stm32f407xx_gpio_drvier.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/stm32f407xx_gpio_drvier.d" -MT"Src/stm32f407xx_gpio_drvier.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/stm32f407xx_gpio_drvier.o"
+arm-none-eabi-gcc "../Src/stm32f407xx_usart_driver.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/stm32f407xx_usart_driver.d" -MT"Src/stm32f407xx_usart_driver.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/stm32f407xx_usart_driver.o"
+../Src/stm32f407xx_usart_driver.c:9:17: error: unknown type name 'USART_Handle_t'
+    9 | void USART_Init(USART_Handle_t *pUSARTHandle)
+      |                 ^~~~~~~~~~~~~~
+make: *** [Src/subdir.mk:31: Src/stm32f407xx_usart_driver.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+21:40:30 **** Incremental Build of configuration Debug for project bluetooth ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/stm32f407xx_usart_driver.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/stm32f407xx_usart_driver.d" -MT"Src/stm32f407xx_usart_driver.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/stm32f407xx_usart_driver.o"
+arm-none-eabi-gcc -o "bluetooth.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\tjdtj\OneDrive\Documents\GitHub\Practice-STM32-UART-Bluetooth\target\bluetooth\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="bluetooth.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: bluetooth.elf
+ 
+arm-none-eabi-size  bluetooth.elf 
+arm-none-eabi-objdump -h -S bluetooth.elf  > "bluetooth.list"
+   text	   data	    bss	    dec	    hex	filename
+    644	      8	   1568	   2220	    8ac	bluetooth.elf
+Finished building: default.size.stdout
+ 
+Finished building: bluetooth.list
+ 
+21:40:48 **** Incremental Build of configuration Debug for project bluetooth ****
+make -j12 all 
+arm-none-eabi-size  bluetooth.elf 
+   text	   data	    bss	    dec	    hex	filename
+    644	      8	   1568	   2220	    8ac	bluetooth.elf
+Finished building: default.size.stdout
+ 
