@@ -155,90 +155,14 @@ void USART_SendData(USART_Handle_t *pUSARTHandle, uint8_t *pTxBuffer, uint32_t L
 void  USART_ReceiveData(USART_Handle_t *pUSARTHandle,uint8_t *pRxBuffer, uint32_t Len){
 	for(uint32_t  i; i<Len; i++){
 		while(!USART_GetFlagStatus(pUSARTHandle->pUSARTx, USART_FLAG_RXNE));
-
-		//Check the USART_WordLength to decide whether we are going to receive 9bit of data in a frame or 8 bit
-		if(pUSARTHandle->USART_Config.USART_WordLength == USART_WORDLEN_9BITS){
-			//We are going to receive 9bit data in a frame
-
-			//Now, check are we using USART_ParityControl control or not
-			if(pUSARTHandle->USART_Config.USART_ParityControl == USART_PARITY_DISABLE){
-				*((uint16_t*) pRxBuffer) = (pUSARTHandle->pUSARTx->DR  & (uint16_t)0x01FF);
-
-				pRxBuffer++;
-				pRxBuffer++;
-			}
-			else{
-				*((uint16_t*) pRxBuffer) = (pUSARTHandle->pUSARTx->DR  & (uint8_t)0xFF);
-				pxRxBuffer++;
-			}
-		}
-		else{
-			//We are going to receive 8bit data in a frame
-
-			//Now, check are we using USART_ParityControl control or not
-			if(pUSARTHandle->USART_Config.USART_ParityControl == USART_PARITY_DISABLE)
-			{
-				//No parity is used , so all 8bits will be of user data
-
-				//read 8 bits from DR
-				 *pRxBuffer = (uint8_t) (pUSARTHandle->pUSARTx->DR  & (uint8_t)0xFF);
-			}
-
-			else
-			{
-				//Parity is used, so , 7 bits will be of user data and 1 bit is parity
-
-				//read only 7 bits , hence mask the DR with 0X7F
-				 *pRxBuffer = (uint8_t) (pUSARTHandle->pUSARTx->DR  & (uint8_t)0x7F);
-
-			}
-
-			//Now , increment the pRxBuffer
-			pRxBuffer++;
-		}
 	}
 }
 
 
 
 
-uint8_t USART_SendDataIT(USART_Handle_t *pUSARTHandle,uint8_t *pTxBuffer, uint32_t Len){
-	uint8_t txstate = pUSARTHandle->TxBusyState;
-
-	if(txstate != USART_BUSY_IN_TX){
-		pUSARTHandle->TxLen = Len;
-		pUSARTHandle->TxBusyState = USART_BUSY_IN_TX;
-
-		//Implement the code to enable interrupt for TXE
-		pUSARTHandle->pUSARTx->CR1 |= ( 1 << USART_CR1_TXEIE);
-
-
-		//Implement the code to enable interrupt for TC
-		pUSARTHandle->pUSARTx->CR1 |= ( 1 << USART_CR1_TCIE);
-	}
-}
-
-
-uint8_t USART_ReceiveDataIT(USART_Handle_t *pUSARTHandle,uint8_t *pRxBuffer, uint32_t Len)
-{
-	uint8_t rxstate = pUSARTHandle->RxBusyState;
-
-	if(rxstate != USART_BUSY_IN_RX)
-	{
-		pUSARTHandle->RxLen = Len;
-		pUSARTHandle->pRxBuffer = pRxBuffer;
-		pUSARTHandle->RxBusyState = USART_BUSY_IN_RX;
-
-		(void)pUSARTHandle->pUSARTx->DR;
-
-		//Implement the code to enable interrupt for RXNE
-		pUSARTHandle->pUSARTx->CR1 |= ( 1 << USART_CR1_RXNEIE);
-
-	}
-
-	return rxstate;
-}
-
+uint8_t USART_SendDataIT(USART_Handle_t *pUSARTHandle,uint8_t *pTxBuffer, uint32_t Len);
+uint8_t USART_ReceiveDataIT(USART_Handle_t *pUSARTHandle,uint8_t *pRxBuffer, uint32_t Len);
 
 
 uint8_t USART_GetFlagStatus(USART_RegDef_t *pUSARTx, uint8_t StatusFlagName)
