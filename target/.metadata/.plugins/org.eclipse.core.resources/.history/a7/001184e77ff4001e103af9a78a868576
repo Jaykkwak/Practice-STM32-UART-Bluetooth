@@ -800,5 +800,6 @@ void USART_IRQHandling(USART_Handle_t *pUSARTHandle)
  */
 __weak void USART_ApplicationEventCallback(USART_Handle_t *pUSARTHandle,uint8_t event)
 {
+
 }
 

@@ -518,7 +518,7 @@ void USART_IRQHandling(USART_Handle_t *pUSARTHandle)
 	{
 		//this interrupt is because of TC
 
-		//close transmission and call application  =callback if TxLen is zero
+		//close transmission and call application callback if TxLen is zero
 		if ( pUSARTHandle->TxBusyState == USART_BUSY_IN_TX)
 		{
 			//Check the TxLen . If it is zero then close the data transmission
@@ -782,23 +782,7 @@ void USART_IRQHandling(USART_Handle_t *pUSARTHandle)
 			USART_ApplicationEventCallback(pUSARTHandle,USART_ERR_ORE);
 		}
 	}
-}
 
-/*********************************************************************
- * @fn      		  - USART_ApplicationEventCallback
- *
- * @brief             -
- *
- * @param[in]         -
- * @param[in]         -
- * @param[in]         -
- *
- * @return            -
- *
- * @Note              -
 
- */
-__weak void USART_ApplicationEventCallback(USART_Handle_t *pUSARTHandle,uint8_t event)
-{
 }
 
