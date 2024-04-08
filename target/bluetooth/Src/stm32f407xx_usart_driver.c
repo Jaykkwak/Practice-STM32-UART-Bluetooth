@@ -233,13 +233,10 @@ uint8_t USART_ReceiveDataIT(USART_Handle_t *pUSARTHandle,uint8_t *pRxBuffer, uin
 
 		//Implement the code to enable interrupt for RXNE
 		pUSARTHandle->pUSARTx->CR1 |= ( 1 << USART_CR1_RXNEIE);
-
 	}
 
 	return rxstate;
 }
-
-
 
 uint8_t USART_GetFlagStatus(USART_RegDef_t *pUSARTx, uint8_t StatusFlagName)
 {
@@ -466,7 +463,6 @@ void USART_IRQInterruptConfig(uint8_t IRQNumber, uint8_t EnorDi)
 		}
 		else if(IRQNumber >= 6 && IRQNumber < 96 )
 		{
-			//program ICER2 register
 			*NVIC_ICER3 |= ( 1 << (IRQNumber % 64) );
 		}
 	}
