@@ -169,7 +169,7 @@ void  USART_ReceiveData(USART_Handle_t *pUSARTHandle,uint8_t *pRxBuffer, uint32_
 			}
 			else{
 				*((uint16_t*) pRxBuffer) = (pUSARTHandle->pUSARTx->DR  & (uint8_t)0xFF);
-				pRxBuffer++;
+				pxRxBuffer++;
 			}
 		}
 		else{

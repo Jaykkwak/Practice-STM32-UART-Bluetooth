@@ -7,6 +7,7 @@
 C_SRCS += \
 ../Src/main.c \
 ../Src/stm32f407xx_gpio_drvier.c \
+../Src/stm32f407xx_rcc_driver.c \
 ../Src/stm32f407xx_usart_driver.c \
 ../Src/syscalls.c \
 ../Src/sysmem.c 
@@ -14,6 +15,7 @@ C_SRCS += \
 OBJS += \
 ./Src/main.o \
 ./Src/stm32f407xx_gpio_drvier.o \
+./Src/stm32f407xx_rcc_driver.o \
 ./Src/stm32f407xx_usart_driver.o \
 ./Src/syscalls.o \
 ./Src/sysmem.o 
@@ -21,6 +23,7 @@ OBJS += \
 C_DEPS += \
 ./Src/main.d \
 ./Src/stm32f407xx_gpio_drvier.d \
+./Src/stm32f407xx_rcc_driver.d \
 ./Src/stm32f407xx_usart_driver.d \
 ./Src/syscalls.d \
 ./Src/sysmem.d 
@@ -33,7 +36,7 @@ Src/%.o Src/%.su Src/%.cyclo: ../Src/%.c Src/subdir.mk
 clean: clean-Src
 
 clean-Src:
-	-$(RM) ./Src/main.cyclo ./Src/main.d ./Src/main.o ./Src/main.su ./Src/stm32f407xx_gpio_drvier.cyclo ./Src/stm32f407xx_gpio_drvier.d ./Src/stm32f407xx_gpio_drvier.o ./Src/stm32f407xx_gpio_drvier.su ./Src/stm32f407xx_usart_driver.cyclo ./Src/stm32f407xx_usart_driver.d ./Src/stm32f407xx_usart_driver.o ./Src/stm32f407xx_usart_driver.su ./Src/syscalls.cyclo ./Src/syscalls.d ./Src/syscalls.o ./Src/syscalls.su ./Src/sysmem.cyclo ./Src/sysmem.d ./Src/sysmem.o ./Src/sysmem.su
+	-$(RM) ./Src/main.cyclo ./Src/main.d ./Src/main.o ./Src/main.su ./Src/stm32f407xx_gpio_drvier.cyclo ./Src/stm32f407xx_gpio_drvier.d ./Src/stm32f407xx_gpio_drvier.o ./Src/stm32f407xx_gpio_drvier.su ./Src/stm32f407xx_rcc_driver.cyclo ./Src/stm32f407xx_rcc_driver.d ./Src/stm32f407xx_rcc_driver.o ./Src/stm32f407xx_rcc_driver.su ./Src/stm32f407xx_usart_driver.cyclo ./Src/stm32f407xx_usart_driver.d ./Src/stm32f407xx_usart_driver.o ./Src/stm32f407xx_usart_driver.su ./Src/syscalls.cyclo ./Src/syscalls.d ./Src/syscalls.o ./Src/syscalls.su ./Src/sysmem.cyclo ./Src/sysmem.d ./Src/sysmem.o ./Src/sysmem.su
 
 .PHONY: clean-Src
 

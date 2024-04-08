@@ -95,7 +95,7 @@ int main(void)
 
 	USART_IRQInterruptConfig(IRQ_NO_USART2, ENABLE);
 
-	USART_IRQPriorityConfig(IRQ_NO_USART2, 0);
+//	USART_IRQPriorityConfig(IRQ_NO_USART2, 0);
 
 	USART_PeripheralControl(USART2,ENABLE);
 
@@ -110,8 +110,6 @@ int main(void)
 
 void USART2_IRQHandler(void)
 {
-	memset(rx_buff, 0, sizeof(rx_buff));
-
 	USART_IRQHandling(&usart2_handle);
 
 	if(*rx_buff =='A'){

@@ -95,7 +95,7 @@ int main(void)
 
 	USART_IRQInterruptConfig(IRQ_NO_USART2, ENABLE);
 
-	USART_IRQPriorityConfig(IRQ_NO_USART2, 0);
+//	USART_IRQPriorityConfig(IRQ_NO_USART2, 0);
 
 	USART_PeripheralControl(USART2,ENABLE);
 

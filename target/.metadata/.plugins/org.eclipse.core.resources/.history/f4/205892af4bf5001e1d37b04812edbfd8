@@ -4,7 +4,6 @@
  *  Created on: Apr 6, 2024
  *      Author: me
  */
-#include "stm32f407xx.h"
 
 #ifndef STM32F407XX_RCC_DRIVER_H_
 #define STM32F407XX_RCC_DRIVER_H_

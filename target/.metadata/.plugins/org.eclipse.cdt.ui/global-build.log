@@ -67,3 +67,323 @@ arm-none-eabi-size  bluetooth.elf
     644	      8	   1568	   2220	    8ac	bluetooth.elf
 Finished building: default.size.stdout
  
+20:56:40 **** Build of configuration Debug for project bluetooth ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/stm32f407xx_gpio_drvier.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/stm32f407xx_gpio_drvier.d" -MT"Src/stm32f407xx_gpio_drvier.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/stm32f407xx_gpio_drvier.o"
+arm-none-eabi-gcc "../Src/stm32f407xx_rcc_driver.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/stm32f407xx_rcc_driver.d" -MT"Src/stm32f407xx_rcc_driver.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/stm32f407xx_rcc_driver.o"
+arm-none-eabi-gcc "../Src/stm32f407xx_usart_driver.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/stm32f407xx_usart_driver.d" -MT"Src/stm32f407xx_usart_driver.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/stm32f407xx_usart_driver.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/sysmem.o"
+In file included from ../Src/stm32f407xx_rcc_driver.c:9:
+../Inc/stm32f407xx_rcc_driver.h:12:1: error: unknown type name 'uint32_t'
+   12 | uint32_t RCC_GetPCLK1Value(void);
+      | ^~~~~~~~
+../Inc/stm32f407xx_rcc_driver.h:1:1: note: 'uint32_t' is defined in header '<stdint.h>'; did you forget to '#include <stdint.h>'?
+  +++ |+#include <stdint.h>
+    1 | /*
+../Inc/stm32f407xx_rcc_driver.h:15:1: error: unknown type name 'uint32_t'
+   15 | uint32_t RCC_GetPCLK2Value(void);
+      | ^~~~~~~~
+../Inc/stm32f407xx_rcc_driver.h:15:1: note: 'uint32_t' is defined in header '<stdint.h>'; did you forget to '#include <stdint.h>'?
+../Inc/stm32f407xx_rcc_driver.h:18:1: error: unknown type name 'uint32_t'
+   18 | uint32_t  RCC_GetPLLOutputClock(void);
+      | ^~~~~~~~
+../Inc/stm32f407xx_rcc_driver.h:18:1: note: 'uint32_t' is defined in header '<stdint.h>'; did you forget to '#include <stdint.h>'?
+../Src/stm32f407xx_rcc_driver.c:12:1: error: unknown type name 'uint16_t'
+   12 | uint16_t AHB_PreScaler[8] = {2,4,8,16,64,128,256,512};
+      | ^~~~~~~~
+../Src/stm32f407xx_rcc_driver.c:10:1: note: 'uint16_t' is defined in header '<stdint.h>'; did you forget to '#include <stdint.h>'?
+    9 | #include "stm32f407xx_rcc_driver.h"
+  +++ |+#include <stdint.h>
+   10 | 
+../Src/stm32f407xx_rcc_driver.c:13:1: error: unknown type name 'uint8_t'
+   13 | uint8_t APB1_PreScaler[4] = { 2, 4 , 8, 16};
+      | ^~~~~~~
+../Src/stm32f407xx_rcc_driver.c:13:1: note: 'uint8_t' is defined in header '<stdint.h>'; did you forget to '#include <stdint.h>'?
+../Src/stm32f407xx_rcc_driver.c:17:1: error: unknown type name 'uint32_t'
+   17 | uint32_t RCC_GetPCLK1Value(void)
+      | ^~~~~~~~
+../Src/stm32f407xx_rcc_driver.c:17:1: note: 'uint32_t' is defined in header '<stdint.h>'; did you forget to '#include <stdint.h>'?
+../Src/stm32f407xx_rcc_driver.c: In function 'RCC_GetPCLK1Value':
+../Src/stm32f407xx_rcc_driver.c:19:9: error: unknown type name 'uint32_t'
+   19 |         uint32_t pclk1,SystemClk;
+      |         ^~~~~~~~
+../Src/stm32f407xx_rcc_driver.c:19:9: note: 'uint32_t' is defined in header '<stdint.h>'; did you forget to '#include <stdint.h>'?
+../Src/stm32f407xx_rcc_driver.c:21:9: error: unknown type name 'uint8_t'
+   21 |         uint8_t clksrc,temp,ahbp,apb1p;
+      |         ^~~~~~~
+../Src/stm32f407xx_rcc_driver.c:21:9: note: 'uint8_t' is defined in header '<stdint.h>'; did you forget to '#include <stdint.h>'?
+../Src/stm32f407xx_rcc_driver.c:23:20: error: 'RCC' undeclared (first use in this function)
+   23 |         clksrc = ((RCC->CFGR >> 2) & 0x3);
+      |                    ^~~
+../Src/stm32f407xx_rcc_driver.c:23:20: note: each undeclared identifier is reported only once for each function it appears in
+../Src/stm32f407xx_rcc_driver.c: At top level:
+../Src/stm32f407xx_rcc_driver.c:81:1: error: unknown type name 'uint32_t'
+   81 | uint32_t RCC_GetPCLK2Value(void)
+      | ^~~~~~~~
+../Src/stm32f407xx_rcc_driver.c:81:1: note: 'uint32_t' is defined in header '<stdint.h>'; did you forget to '#include <stdint.h>'?
+../Src/stm32f407xx_rcc_driver.c: In function 'RCC_GetPCLK2Value':
+../Src/stm32f407xx_rcc_driver.c:83:9: error: unknown type name 'uint32_t'
+   83 |         uint32_t SystemClock=0,tmp,pclk2;
+      |         ^~~~~~~~
+../Src/stm32f407xx_rcc_driver.c:83:9: note: 'uint32_t' is defined in header '<stdint.h>'; did you forget to '#include <stdint.h>'?
+../Src/stm32f407xx_rcc_driver.c:84:9: error: unknown type name 'uint8_t'
+   84 |         uint8_t clk_src = ( RCC->CFGR >> 2) & 0X3;
+      |         ^~~~~~~
+../Src/stm32f407xx_rcc_driver.c:84:9: note: 'uint8_t' is defined in header '<stdint.h>'; did you forget to '#include <stdint.h>'?
+../Src/stm32f407xx_rcc_driver.c:84:29: error: 'RCC' undeclared (first use in this function)
+   84 |         uint8_t clk_src = ( RCC->CFGR >> 2) & 0X3;
+      |                             ^~~
+../Src/stm32f407xx_rcc_driver.c:86:9: error: unknown type name 'uint8_t'
+   86 |         uint8_t ahbp,apb2p;
+      |         ^~~~~~~
+../Src/stm32f407xx_rcc_driver.c:86:9: note: 'uint8_t' is defined in header '<stdint.h>'; did you forget to '#include <stdint.h>'?
+../Src/stm32f407xx_rcc_driver.c: At top level:
+../Src/stm32f407xx_rcc_driver.c:119:1: error: unknown type name 'uint32_t'
+  119 | uint32_t  RCC_GetPLLOutputClock()
+      | ^~~~~~~~
+../Src/stm32f407xx_rcc_driver.c:119:1: note: 'uint32_t' is defined in header '<stdint.h>'; did you forget to '#include <stdint.h>'?
+make: *** [Src/subdir.mk:34: Src/stm32f407xx_rcc_driver.o] Error 1
+make: *** Waiting for unfinished jobs....
+../Src/stm32f407xx_usart_driver.c: In function 'USART_ReceiveData':
+../Src/stm32f407xx_usart_driver.c:172:33: error: 'pxRxBuffer' undeclared (first use in this function); did you mean 'pRxBuffer'?
+  172 |                                 pxRxBuffer++;
+      |                                 ^~~~~~~~~~
+      |                                 pRxBuffer
+../Src/stm32f407xx_usart_driver.c:172:33: note: each undeclared identifier is reported only once for each function it appears in
+../Src/stm32f407xx_usart_driver.c: In function 'USART_SetBaudRate':
+../Src/stm32f407xx_usart_driver.c:283:20: warning: implicit declaration of function 'RCC_GetPCLK2Value' [-Wimplicit-function-declaration]
+  283 |            PCLKx = RCC_GetPCLK2Value();
+      |                    ^~~~~~~~~~~~~~~~~
+../Src/stm32f407xx_usart_driver.c:286:20: warning: implicit declaration of function 'RCC_GetPCLK1Value' [-Wimplicit-function-declaration]
+  286 |            PCLKx = RCC_GetPCLK1Value();
+      |                    ^~~~~~~~~~~~~~~~~
+../Src/stm32f407xx_usart_driver.c: In function 'USART_IRQHandling':
+../Src/stm32f407xx_usart_driver.c:501:33: warning: variable 'temp3' set but not used [-Wunused-but-set-variable]
+  501 |         uint32_t temp1 , temp2, temp3;
+      |                                 ^~~~~
+../Src/stm32f407xx_usart_driver.c: In function 'USART_SendDataIT':
+../Src/stm32f407xx_usart_driver.c:219:1: warning: control reaches end of non-void function [-Wreturn-type]
+  219 | }
+      | ^
+make: *** [Src/subdir.mk:34: Src/stm32f407xx_usart_driver.o] Error 1
+../Src/main.c: In function 'USART2_IRQHandler':
+../Src/main.c:114:20: warning: comparison between pointer and integer
+  114 |         if(rx_buff =='A'){
+      |                    ^~
+../Src/main.c:119:25: warning: comparison between pointer and integer
+  119 |         else if(rx_buff == 'B'){
+      |                         ^~
+../Src/main.c:123:26: warning: comparison between pointer and integer
+  123 |         }else if(rx_buff == 'C'){
+      |                          ^~
+../Src/main.c: In function 'USART_ApplicationEventCallback':
+../Src/main.c:139:25: error: 'rxCmplt' undeclared (first use in this function)
+  139 |                         rxCmplt = SET;
+      |                         ^~~~~~~
+../Src/main.c:139:25: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [Src/subdir.mk:34: Src/main.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+20:58:28 **** Incremental Build of configuration Debug for project bluetooth ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/stm32f407xx_rcc_driver.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/stm32f407xx_rcc_driver.d" -MT"Src/stm32f407xx_rcc_driver.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/stm32f407xx_rcc_driver.o"
+arm-none-eabi-gcc "../Src/stm32f407xx_usart_driver.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/stm32f407xx_usart_driver.d" -MT"Src/stm32f407xx_usart_driver.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/stm32f407xx_usart_driver.o"
+In file included from ../Src/stm32f407xx_rcc_driver.c:9:
+../Inc/stm32f407xx_rcc_driver.h:12:1: error: unknown type name 'uint32_t'
+   12 | uint32_t RCC_GetPCLK1Value(void);
+      | ^~~~~~~~
+../Inc/stm32f407xx_rcc_driver.h:1:1: note: 'uint32_t' is defined in header '<stdint.h>'; did you forget to '#include <stdint.h>'?
+  +++ |+#include <stdint.h>
+    1 | /*
+../Inc/stm32f407xx_rcc_driver.h:15:1: error: unknown type name 'uint32_t'
+   15 | uint32_t RCC_GetPCLK2Value(void);
+      | ^~~~~~~~
+../Inc/stm32f407xx_rcc_driver.h:15:1: note: 'uint32_t' is defined in header '<stdint.h>'; did you forget to '#include <stdint.h>'?
+../Inc/stm32f407xx_rcc_driver.h:18:1: error: unknown type name 'uint32_t'
+   18 | uint32_t  RCC_GetPLLOutputClock(void);
+      | ^~~~~~~~
+../Inc/stm32f407xx_rcc_driver.h:18:1: note: 'uint32_t' is defined in header '<stdint.h>'; did you forget to '#include <stdint.h>'?
+../Src/stm32f407xx_rcc_driver.c:12:1: error: unknown type name 'uint16_t'
+   12 | uint16_t AHB_PreScaler[8] = {2,4,8,16,64,128,256,512};
+      | ^~~~~~~~
+../Src/stm32f407xx_rcc_driver.c:10:1: note: 'uint16_t' is defined in header '<stdint.h>'; did you forget to '#include <stdint.h>'?
+    9 | #include "stm32f407xx_rcc_driver.h"
+  +++ |+#include <stdint.h>
+   10 | 
+../Src/stm32f407xx_rcc_driver.c:13:1: error: unknown type name 'uint8_t'
+   13 | uint8_t APB1_PreScaler[4] = { 2, 4 , 8, 16};
+      | ^~~~~~~
+../Src/stm32f407xx_rcc_driver.c:13:1: note: 'uint8_t' is defined in header '<stdint.h>'; did you forget to '#include <stdint.h>'?
+../Src/stm32f407xx_rcc_driver.c:17:1: error: unknown type name 'uint32_t'
+   17 | uint32_t RCC_GetPCLK1Value(void)
+      | ^~~~~~~~
+../Src/stm32f407xx_rcc_driver.c:17:1: note: 'uint32_t' is defined in header '<stdint.h>'; did you forget to '#include <stdint.h>'?
+../Src/stm32f407xx_rcc_driver.c: In function 'RCC_GetPCLK1Value':
+../Src/stm32f407xx_rcc_driver.c:19:9: error: unknown type name 'uint32_t'
+   19 |         uint32_t pclk1,SystemClk;
+      |         ^~~~~~~~
+../Src/stm32f407xx_rcc_driver.c:19:9: note: 'uint32_t' is defined in header '<stdint.h>'; did you forget to '#include <stdint.h>'?
+../Src/stm32f407xx_rcc_driver.c:21:9: error: unknown type name 'uint8_t'
+   21 |         uint8_t clksrc,temp,ahbp,apb1p;
+      |         ^~~~~~~
+../Src/stm32f407xx_rcc_driver.c:21:9: note: 'uint8_t' is defined in header '<stdint.h>'; did you forget to '#include <stdint.h>'?
+../Src/stm32f407xx_rcc_driver.c:23:20: error: 'RCC' undeclared (first use in this function)
+   23 |         clksrc = ((RCC->CFGR >> 2) & 0x3);
+      |                    ^~~
+../Src/stm32f407xx_rcc_driver.c:23:20: note: each undeclared identifier is reported only once for each function it appears in
+../Src/stm32f407xx_rcc_driver.c: At top level:
+../Src/stm32f407xx_rcc_driver.c:81:1: error: unknown type name 'uint32_t'
+   81 | uint32_t RCC_GetPCLK2Value(void)
+      | ^~~~~~~~
+../Src/stm32f407xx_rcc_driver.c:81:1: note: 'uint32_t' is defined in header '<stdint.h>'; did you forget to '#include <stdint.h>'?
+../Src/stm32f407xx_rcc_driver.c: In function 'RCC_GetPCLK2Value':
+../Src/stm32f407xx_rcc_driver.c:83:9: error: unknown type name 'uint32_t'
+   83 |         uint32_t SystemClock=0,tmp,pclk2;
+      |         ^~~~~~~~
+../Src/stm32f407xx_rcc_driver.c:83:9: note: 'uint32_t' is defined in header '<stdint.h>'; did you forget to '#include <stdint.h>'?
+../Src/stm32f407xx_rcc_driver.c:84:9: error: unknown type name 'uint8_t'
+   84 |         uint8_t clk_src = ( RCC->CFGR >> 2) & 0X3;
+      |         ^~~~~~~
+../Src/stm32f407xx_rcc_driver.c:84:9: note: 'uint8_t' is defined in header '<stdint.h>'; did you forget to '#include <stdint.h>'?
+../Src/stm32f407xx_rcc_driver.c:84:29: error: 'RCC' undeclared (first use in this function)
+   84 |         uint8_t clk_src = ( RCC->CFGR >> 2) & 0X3;
+      |                             ^~~
+../Src/stm32f407xx_rcc_driver.c:86:9: error: unknown type name 'uint8_t'
+   86 |         uint8_t ahbp,apb2p;
+      |         ^~~~~~~
+../Src/stm32f407xx_rcc_driver.c:86:9: note: 'uint8_t' is defined in header '<stdint.h>'; did you forget to '#include <stdint.h>'?
+../Src/stm32f407xx_rcc_driver.c: At top level:
+../Src/stm32f407xx_rcc_driver.c:119:1: error: unknown type name 'uint32_t'
+  119 | uint32_t  RCC_GetPLLOutputClock()
+      | ^~~~~~~~
+../Src/stm32f407xx_rcc_driver.c:119:1: note: 'uint32_t' is defined in header '<stdint.h>'; did you forget to '#include <stdint.h>'?
+make: *** [Src/subdir.mk:34: Src/stm32f407xx_rcc_driver.o] Error 1
+make: *** Waiting for unfinished jobs....
+../Src/stm32f407xx_usart_driver.c: In function 'USART_ReceiveData':
+../Src/stm32f407xx_usart_driver.c:172:33: error: 'pxRxBuffer' undeclared (first use in this function); did you mean 'pRxBuffer'?
+  172 |                                 pxRxBuffer++;
+      |                                 ^~~~~~~~~~
+      |                                 pRxBuffer
+../Src/stm32f407xx_usart_driver.c:172:33: note: each undeclared identifier is reported only once for each function it appears in
+../Src/stm32f407xx_usart_driver.c: In function 'USART_SetBaudRate':
+../Src/stm32f407xx_usart_driver.c:283:20: warning: implicit declaration of function 'RCC_GetPCLK2Value' [-Wimplicit-function-declaration]
+  283 |            PCLKx = RCC_GetPCLK2Value();
+      |                    ^~~~~~~~~~~~~~~~~
+../Src/stm32f407xx_usart_driver.c:286:20: warning: implicit declaration of function 'RCC_GetPCLK1Value' [-Wimplicit-function-declaration]
+  286 |            PCLKx = RCC_GetPCLK1Value();
+      |                    ^~~~~~~~~~~~~~~~~
+../Src/stm32f407xx_usart_driver.c: In function 'USART_IRQHandling':
+../Src/stm32f407xx_usart_driver.c:501:33: warning: variable 'temp3' set but not used [-Wunused-but-set-variable]
+  501 |         uint32_t temp1 , temp2, temp3;
+      |                                 ^~~~~
+../Src/stm32f407xx_usart_driver.c: In function 'USART_SendDataIT':
+../Src/stm32f407xx_usart_driver.c:219:1: warning: control reaches end of non-void function [-Wreturn-type]
+  219 | }
+      | ^
+make: *** [Src/subdir.mk:34: Src/stm32f407xx_usart_driver.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+21:00:01 **** Incremental Build of configuration Debug for project bluetooth ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/stm32f407xx_rcc_driver.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/stm32f407xx_rcc_driver.d" -MT"Src/stm32f407xx_rcc_driver.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/stm32f407xx_rcc_driver.o"
+arm-none-eabi-gcc "../Src/stm32f407xx_usart_driver.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/stm32f407xx_usart_driver.d" -MT"Src/stm32f407xx_usart_driver.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/stm32f407xx_usart_driver.o"
+../Src/stm32f407xx_usart_driver.c: In function 'USART_ReceiveData':
+../Src/stm32f407xx_usart_driver.c:172:33: error: 'pxRxBuffer' undeclared (first use in this function); did you mean 'pRxBuffer'?
+  172 |                                 pxRxBuffer++;
+      |                                 ^~~~~~~~~~
+      |                                 pRxBuffer
+../Src/stm32f407xx_usart_driver.c:172:33: note: each undeclared identifier is reported only once for each function it appears in
+../Src/stm32f407xx_usart_driver.c: In function 'USART_SetBaudRate':
+../Src/stm32f407xx_usart_driver.c:283:20: warning: implicit declaration of function 'RCC_GetPCLK2Value' [-Wimplicit-function-declaration]
+  283 |            PCLKx = RCC_GetPCLK2Value();
+      |                    ^~~~~~~~~~~~~~~~~
+../Src/stm32f407xx_usart_driver.c:286:20: warning: implicit declaration of function 'RCC_GetPCLK1Value' [-Wimplicit-function-declaration]
+  286 |            PCLKx = RCC_GetPCLK1Value();
+      |                    ^~~~~~~~~~~~~~~~~
+../Src/stm32f407xx_usart_driver.c: In function 'USART_IRQHandling':
+../Src/stm32f407xx_usart_driver.c:501:33: warning: variable 'temp3' set but not used [-Wunused-but-set-variable]
+  501 |         uint32_t temp1 , temp2, temp3;
+      |                                 ^~~~~
+../Src/stm32f407xx_usart_driver.c: In function 'USART_SendDataIT':
+../Src/stm32f407xx_usart_driver.c:219:1: warning: control reaches end of non-void function [-Wreturn-type]
+  219 | }
+      | ^
+make: *** [Src/subdir.mk:34: Src/stm32f407xx_usart_driver.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+21:31:59 **** Incremental Build of configuration Debug for project bluetooth ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/stm32f407xx_usart_driver.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/stm32f407xx_usart_driver.d" -MT"Src/stm32f407xx_usart_driver.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/stm32f407xx_usart_driver.o"
+../Src/stm32f407xx_usart_driver.c: In function 'USART_SetBaudRate':
+../Src/stm32f407xx_usart_driver.c:283:20: warning: implicit declaration of function 'RCC_GetPCLK2Value' [-Wimplicit-function-declaration]
+  283 |            PCLKx = RCC_GetPCLK2Value();
+      |                    ^~~~~~~~~~~~~~~~~
+../Src/stm32f407xx_usart_driver.c:286:20: warning: implicit declaration of function 'RCC_GetPCLK1Value' [-Wimplicit-function-declaration]
+  286 |            PCLKx = RCC_GetPCLK1Value();
+      |                    ^~~~~~~~~~~~~~~~~
+../Src/stm32f407xx_usart_driver.c: In function 'USART_IRQHandling':
+../Src/stm32f407xx_usart_driver.c:501:33: warning: variable 'temp3' set but not used [-Wunused-but-set-variable]
+  501 |         uint32_t temp1 , temp2, temp3;
+      |                                 ^~~~~
+../Src/stm32f407xx_usart_driver.c: In function 'USART_SendDataIT':
+../Src/stm32f407xx_usart_driver.c:219:1: warning: control reaches end of non-void function [-Wreturn-type]
+  219 | }
+      | ^
+arm-none-eabi-gcc -o "bluetooth.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\tjdtj\OneDrive\Documents\GitHub\Practice-STM32-UART-Bluetooth\target\bluetooth\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="bluetooth.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: bluetooth.elf
+ 
+arm-none-eabi-size  bluetooth.elf 
+arm-none-eabi-objdump -h -S bluetooth.elf  > "bluetooth.list"
+   text	   data	    bss	    dec	    hex	filename
+   4508	     28	   2628	   7164	   1bfc	bluetooth.elf
+Finished building: default.size.stdout
+ 
+Finished building: bluetooth.list
+ 
+21:35:15 **** Incremental Build of configuration Debug for project bluetooth ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/stm32f407xx_gpio_drvier.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/stm32f407xx_gpio_drvier.d" -MT"Src/stm32f407xx_gpio_drvier.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/stm32f407xx_gpio_drvier.o"
+arm-none-eabi-gcc "../Src/stm32f407xx_rcc_driver.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/stm32f407xx_rcc_driver.d" -MT"Src/stm32f407xx_rcc_driver.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/stm32f407xx_rcc_driver.o"
+arm-none-eabi-gcc "../Src/stm32f407xx_usart_driver.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/stm32f407xx_usart_driver.d" -MT"Src/stm32f407xx_usart_driver.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/stm32f407xx_usart_driver.o"
+../Src/stm32f407xx_usart_driver.c: In function 'USART_IRQHandling':
+../Src/stm32f407xx_usart_driver.c:501:33: warning: variable 'temp3' set but not used [-Wunused-but-set-variable]
+  501 |         uint32_t temp1 , temp2, temp3;
+      |                                 ^~~~~
+../Src/stm32f407xx_usart_driver.c: In function 'USART_SendDataIT':
+../Src/stm32f407xx_usart_driver.c:219:1: warning: control reaches end of non-void function [-Wreturn-type]
+  219 | }
+      | ^
+arm-none-eabi-gcc -o "bluetooth.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\tjdtj\OneDrive\Documents\GitHub\Practice-STM32-UART-Bluetooth\target\bluetooth\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="bluetooth.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: bluetooth.elf
+ 
+arm-none-eabi-size  bluetooth.elf 
+arm-none-eabi-objdump -h -S bluetooth.elf  > "bluetooth.list"
+   text	   data	    bss	    dec	    hex	filename
+   4504	     28	   2628	   7160	   1bf8	bluetooth.elf
+Finished building: default.size.stdout
+ 
+Finished building: bluetooth.list
+ 
+21:36:03 **** Incremental Build of configuration Debug for project bluetooth ****
+make -j12 all 
+arm-none-eabi-size  bluetooth.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4504	     28	   2628	   7160	   1bf8	bluetooth.elf
+Finished building: default.size.stdout
+ 
+22:18:29 **** Incremental Build of configuration Debug for project bluetooth ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "bluetooth.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\tjdtj\OneDrive\Documents\GitHub\Practice-STM32-UART-Bluetooth\target\bluetooth\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="bluetooth.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: bluetooth.elf
+ 
+arm-none-eabi-size  bluetooth.elf 
+arm-none-eabi-objdump -h -S bluetooth.elf  > "bluetooth.list"
+   text	   data	    bss	    dec	    hex	filename
+   4624	     28	   2628	   7280	   1c70	bluetooth.elf
+Finished building: default.size.stdout
+ 
+Finished building: bluetooth.list
+ 
