@@ -26,7 +26,7 @@
 #endif
 
 USART_Handle_t usart2_handle;
-uint8_t rx_buff[10];
+uint16_t rx_buff;
 uint8_t rxCmplt = RESET;
 
 void GPIO_LEDInit(void)
@@ -124,16 +124,16 @@ void USART2_IRQHandler(void)
 
 	USART_IRQHandling(&usart2_handle);
 
-	if(*rx_buff =='A'){
+	if(rx_buff =='A'){
 		GPIO_WriteToOutputPin(GPIOD, GPIO_PIN_NO_0, GPIO_PIN_SET);
 		delay();
 		GPIO_WriteToOutputPin(GPIOD, GPIO_PIN_NO_0, GPIO_PIN_RESET);
 	}
-	else if(*rx_buff == 'B'){
+	else if(rx_buff == 'B'){
 		GPIO_WriteToOutputPin(GPIOD, GPIO_PIN_NO_1, GPIO_PIN_SET);
 		delay();
 		GPIO_WriteToOutputPin(GPIOD, GPIO_PIN_NO_1, GPIO_PIN_RESET);
-	}else if(*rx_buff == 'C'){
+	}else if(rx_buff == 'C'){
 		GPIO_WriteToOutputPin(GPIOD, GPIO_PIN_NO_2, GPIO_PIN_SET);
 		delay();
 		GPIO_WriteToOutputPin(GPIOD, GPIO_PIN_NO_2, GPIO_PIN_RESET);

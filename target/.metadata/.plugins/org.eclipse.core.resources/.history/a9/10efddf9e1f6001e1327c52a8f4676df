@@ -35,15 +35,25 @@ void GPIO_LEDInit(void)
 
 	//this is led gpio configuration
 	GpioLed.pGPIOx = GPIOD;
-	GpioLed.GPIO_PinConfig.GPIO_PinNumber = GPIO_PIN_NO_0 | GPIO_PIN_NO_1 | GPIO_PIN_NO_2 | GPIO_PIN_NO_3;
+	GpioLed.GPIO_PinConfig.GPIO_PinNumber = GPIO_PIN_NO_0;
 	GpioLed.GPIO_PinConfig.GPIO_PinMode = GPIO_MODE_OUT;
 	GpioLed.GPIO_PinConfig.GPIO_PinSpeed = GPIO_SPEED_FAST;
-	GpioLed.GPIO_PinConfig.GPIO_PinOPType = GPIO_OP_TYPE_OD;
+	GpioLed.GPIO_PinConfig.GPIO_PinOPType = GPIO_OP_TYPE_PP;
 	GpioLed.GPIO_PinConfig.GPIO_PinPuPdControl = GPIO_NO_PUPD;
 
-	GPIO_PeriClockControl(GPIOD,ENABLE);
-
 	GPIO_Init(&GpioLed);
+
+	GpioLed.GPIO_PinConfig.GPIO_PinNumber = GPIO_PIN_NO_1;
+	GPIO_Init(&GpioLed);
+
+	GpioLed.GPIO_PinConfig.GPIO_PinNumber = GPIO_PIN_NO_2;
+	GPIO_Init(&GpioLed);
+
+	GpioLed.GPIO_PinConfig.GPIO_PinNumber = GPIO_PIN_NO_3;
+	GPIO_Init(&GpioLed);
+
+
+	GPIO_PeriClockControl(GPIOD,ENABLE);
 
 }
 
@@ -95,14 +105,14 @@ int main(void)
 
 	USART_IRQInterruptConfig(IRQ_NO_USART2, ENABLE);
 
-//	USART_IRQPriorityConfig(IRQ_NO_USART2, 0);
+	USART_IRQPriorityConfig(IRQ_NO_USART2, 0);
 
 	USART_PeripheralControl(USART2,ENABLE);
 
 	while(1){
 		//First lets enable the reception in interrupt mode
 		//this code enables the receive interrupt
-		while ( USART_ReceiveDataIT(&usart2_handle,rx_buff,1) != USART_READY );
+//		while ( USART_ReceiveDataIT(&usart2_handle,rx_buff,1) != USART_READY );
 	}
 
 }
@@ -110,7 +120,7 @@ int main(void)
 
 void USART2_IRQHandler(void)
 {
-	memset(buffer, 0, sizeof(buffer));
+//	memset(rx_buff, 0, sizeof(rx_buff));
 
 	USART_IRQHandling(&usart2_handle);
 

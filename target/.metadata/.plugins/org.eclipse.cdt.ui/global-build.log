@@ -387,3 +387,376 @@ Finished building: default.size.stdout
  
 Finished building: bluetooth.list
  
+23:21:48 **** Incremental Build of configuration Debug for project bluetooth ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "bluetooth.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\tjdtj\OneDrive\Documents\GitHub\Practice-STM32-UART-Bluetooth\target\bluetooth\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="bluetooth.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: bluetooth.elf
+ 
+arm-none-eabi-size  bluetooth.elf 
+arm-none-eabi-objdump -h -S bluetooth.elf  > "bluetooth.list"
+   text	   data	    bss	    dec	    hex	filename
+   4624	     28	   2628	   7280	   1c70	bluetooth.elf
+Finished building: default.size.stdout
+ 
+Finished building: bluetooth.list
+ 
+23:22:52 **** Incremental Build of configuration Debug for project bluetooth ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "bluetooth.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\tjdtj\OneDrive\Documents\GitHub\Practice-STM32-UART-Bluetooth\target\bluetooth\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="bluetooth.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: bluetooth.elf
+ 
+arm-none-eabi-size  bluetooth.elf 
+arm-none-eabi-objdump -h -S bluetooth.elf  > "bluetooth.list"
+   text	   data	    bss	    dec	    hex	filename
+   3000	      8	   2632	   5640	   1608	bluetooth.elf
+Finished building: default.size.stdout
+ 
+Finished building: bluetooth.list
+ 
+23:24:25 **** Incremental Build of configuration Debug for project bluetooth ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "bluetooth.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\tjdtj\OneDrive\Documents\GitHub\Practice-STM32-UART-Bluetooth\target\bluetooth\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="bluetooth.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: bluetooth.elf
+ 
+arm-none-eabi-size  bluetooth.elf 
+arm-none-eabi-objdump -h -S bluetooth.elf  > "bluetooth.list"
+   text	   data	    bss	    dec	    hex	filename
+   3000	      8	   2632	   5640	   1608	bluetooth.elf
+Finished building: default.size.stdout
+ 
+Finished building: bluetooth.list
+ 
+23:25:30 **** Incremental Build of configuration Debug for project bluetooth ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "bluetooth.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\tjdtj\OneDrive\Documents\GitHub\Practice-STM32-UART-Bluetooth\target\bluetooth\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="bluetooth.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: bluetooth.elf
+ 
+arm-none-eabi-size  bluetooth.elf 
+arm-none-eabi-objdump -h -S bluetooth.elf  > "bluetooth.list"
+   text	   data	    bss	    dec	    hex	filename
+   3000	      8	   2632	   5640	   1608	bluetooth.elf
+Finished building: default.size.stdout
+ 
+Finished building: bluetooth.list
+ 
+20:59:01 **** Incremental Build of configuration Debug for project bluetooth ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:147:1: error: expected declaration or statement at end of input
+  147 | }
+      | ^
+At top level:
+../Src/main.c:137:6: warning: 'USART_ApplicationEventCallback' defined but not used [-Wunused-function]
+  137 | void USART_ApplicationEventCallback( USART_Handle_t *pUSARTHandle,uint8_t ApEv)
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Src/main.c:110:6: warning: 'USART2_IRQHandler' defined but not used [-Wunused-function]
+  110 | void USART2_IRQHandler(void)
+      |      ^~~~~~~~~~~~~~~~~
+make: *** [Src/subdir.mk:34: Src/main.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+21:00:14 **** Incremental Build of configuration Debug for project bluetooth ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "bluetooth.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\tjdtj\OneDrive\Documents\GitHub\Practice-STM32-UART-Bluetooth\target\bluetooth\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="bluetooth.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: bluetooth.elf
+ 
+arm-none-eabi-size  bluetooth.elf 
+arm-none-eabi-objdump -h -S bluetooth.elf  > "bluetooth.list"
+   text	   data	    bss	    dec	    hex	filename
+   4624	     28	   2628	   7280	   1c70	bluetooth.elf
+Finished building: default.size.stdout
+ 
+Finished building: bluetooth.list
+ 
+21:02:00 **** Incremental Build of configuration Debug for project bluetooth ****
+make -j12 all 
+arm-none-eabi-size  bluetooth.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4624	     28	   2628	   7280	   1c70	bluetooth.elf
+Finished building: default.size.stdout
+ 
+21:19:07 **** Incremental Build of configuration Debug for project bluetooth ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "bluetooth.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\tjdtj\OneDrive\Documents\GitHub\Practice-STM32-UART-Bluetooth\target\bluetooth\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="bluetooth.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: bluetooth.elf
+ 
+arm-none-eabi-size  bluetooth.elf 
+arm-none-eabi-objdump -h -S bluetooth.elf  > "bluetooth.list"
+   text	   data	    bss	    dec	    hex	filename
+   4660	     28	   2628	   7316	   1c94	bluetooth.elf
+Finished building: default.size.stdout
+ 
+Finished building: bluetooth.list
+ 
+21:19:18 **** Incremental Build of configuration Debug for project bluetooth ****
+make -j12 all 
+arm-none-eabi-size  bluetooth.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4660	     28	   2628	   7316	   1c94	bluetooth.elf
+Finished building: default.size.stdout
+ 
+21:25:20 **** Incremental Build of configuration Debug for project bluetooth ****
+make -j12 all 
+arm-none-eabi-size  bluetooth.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4660	     28	   2628	   7316	   1c94	bluetooth.elf
+Finished building: default.size.stdout
+ 
+21:25:36 **** Incremental Build of configuration Debug for project bluetooth ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "bluetooth.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\tjdtj\OneDrive\Documents\GitHub\Practice-STM32-UART-Bluetooth\target\bluetooth\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="bluetooth.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: bluetooth.elf
+ 
+arm-none-eabi-size  bluetooth.elf 
+arm-none-eabi-objdump -h -S bluetooth.elf  > "bluetooth.list"
+   text	   data	    bss	    dec	    hex	filename
+   4632	     28	   2628	   7288	   1c78	bluetooth.elf
+Finished building: default.size.stdout
+ 
+Finished building: bluetooth.list
+ 
+21:27:00 **** Incremental Build of configuration Debug for project bluetooth ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "bluetooth.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\tjdtj\OneDrive\Documents\GitHub\Practice-STM32-UART-Bluetooth\target\bluetooth\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="bluetooth.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: bluetooth.elf
+ 
+arm-none-eabi-size  bluetooth.elf 
+arm-none-eabi-objdump -h -S bluetooth.elf  > "bluetooth.list"
+   text	   data	    bss	    dec	    hex	filename
+   4528	     28	   2628	   7184	   1c10	bluetooth.elf
+Finished building: default.size.stdout
+ 
+Finished building: bluetooth.list
+ 
+21:28:11 **** Incremental Build of configuration Debug for project bluetooth ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:115:60: warning: passing argument 2 of 'USART_ReceiveDataIT' makes pointer from integer without a cast [-Wint-conversion]
+  115 |                 while ( USART_ReceiveDataIT(&usart2_handle,rx_buff,1) != USART_READY );
+      |                                                            ^~~~~~~
+      |                                                            |
+      |                                                            uint16_t {aka short unsigned int}
+In file included from ../Inc/stm32f407xx.h:614,
+                 from ../Src/main.c:22:
+../Inc/stm32f407xx_usart_driver.h:151:67: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'uint16_t' {aka 'short unsigned int'}
+  151 | uint8_t USART_ReceiveDataIT(USART_Handle_t *pUSARTHandle,uint8_t *pRxBuffer, uint32_t Len);
+      |                                                          ~~~~~~~~~^~~~~~~~~
+../Src/main.c: In function 'USART2_IRQHandler':
+../Src/main.c:127:12: error: invalid type argument of unary '*' (have 'int')
+  127 |         if(*rx_buff =='A'){
+      |            ^~~~~~~~
+../Src/main.c:132:17: error: invalid type argument of unary '*' (have 'int')
+  132 |         else if(*rx_buff == 'B'){
+      |                 ^~~~~~~~
+../Src/main.c:136:18: error: invalid type argument of unary '*' (have 'int')
+  136 |         }else if(*rx_buff == 'C'){
+      |                  ^~~~~~~~
+make: *** [Src/subdir.mk:34: Src/main.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+21:28:18 **** Incremental Build of configuration Debug for project bluetooth ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:115:60: warning: passing argument 2 of 'USART_ReceiveDataIT' makes pointer from integer without a cast [-Wint-conversion]
+  115 |                 while ( USART_ReceiveDataIT(&usart2_handle,rx_buff,1) != USART_READY );
+      |                                                            ^~~~~~~
+      |                                                            |
+      |                                                            uint16_t {aka short unsigned int}
+In file included from ../Inc/stm32f407xx.h:614,
+                 from ../Src/main.c:22:
+../Inc/stm32f407xx_usart_driver.h:151:67: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'uint16_t' {aka 'short unsigned int'}
+  151 | uint8_t USART_ReceiveDataIT(USART_Handle_t *pUSARTHandle,uint8_t *pRxBuffer, uint32_t Len);
+      |                                                          ~~~~~~~~~^~~~~~~~~
+../Src/main.c: In function 'USART2_IRQHandler':
+../Src/main.c:127:12: error: invalid type argument of unary '*' (have 'int')
+  127 |         if(*rx_buff =='A'){
+      |            ^~~~~~~~
+../Src/main.c:132:17: error: invalid type argument of unary '*' (have 'int')
+  132 |         else if(*rx_buff == 'B'){
+      |                 ^~~~~~~~
+../Src/main.c:136:18: error: invalid type argument of unary '*' (have 'int')
+  136 |         }else if(*rx_buff == 'C'){
+      |                  ^~~~~~~~
+make: *** [Src/subdir.mk:34: Src/main.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+21:28:36 **** Incremental Build of configuration Debug for project bluetooth ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:115:60: warning: passing argument 2 of 'USART_ReceiveDataIT' makes pointer from integer without a cast [-Wint-conversion]
+  115 |                 while ( USART_ReceiveDataIT(&usart2_handle,rx_buff,1) != USART_READY );
+      |                                                            ^~~~~~~
+      |                                                            |
+      |                                                            uint16_t {aka short unsigned int}
+In file included from ../Inc/stm32f407xx.h:614,
+                 from ../Src/main.c:22:
+../Inc/stm32f407xx_usart_driver.h:151:67: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'uint16_t' {aka 'short unsigned int'}
+  151 | uint8_t USART_ReceiveDataIT(USART_Handle_t *pUSARTHandle,uint8_t *pRxBuffer, uint32_t Len);
+      |                                                          ~~~~~~~~~^~~~~~~~~
+arm-none-eabi-gcc -o "bluetooth.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\tjdtj\OneDrive\Documents\GitHub\Practice-STM32-UART-Bluetooth\target\bluetooth\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="bluetooth.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: bluetooth.elf
+ 
+arm-none-eabi-size  bluetooth.elf 
+arm-none-eabi-objdump -h -S bluetooth.elf  > "bluetooth.list"
+   text	   data	    bss	    dec	    hex	filename
+   4636	     28	   1604	   6268	   187c	bluetooth.elf
+Finished building: default.size.stdout
+ 
+Finished building: bluetooth.list
+ 
+21:29:52 **** Incremental Build of configuration Debug for project bluetooth ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/stm32f407xx_usart_driver.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/stm32f407xx_usart_driver.d" -MT"Src/stm32f407xx_usart_driver.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/stm32f407xx_usart_driver.o"
+../Src/stm32f407xx_usart_driver.c:222:9: error: conflicting types for 'USART_ReceiveDataIT'; have 'uint8_t(USART_Handle_t *, uint16_t *, uint32_t)' {aka 'unsigned char(USART_Handle_t *, short unsigned int *, long unsigned int)'}
+  222 | uint8_t USART_ReceiveDataIT(USART_Handle_t *pUSARTHandle,uint16_t *pRxBuffer, uint32_t Len)
+      |         ^~~~~~~~~~~~~~~~~~~
+In file included from ../Src/stm32f407xx_usart_driver.c:7:
+../Inc/stm32f407xx_usart_driver.h:151:9: note: previous declaration of 'USART_ReceiveDataIT' with type 'uint8_t(USART_Handle_t *, uint8_t *, uint32_t)' {aka 'unsigned char(USART_Handle_t *, unsigned char *, long unsigned int)'}
+  151 | uint8_t USART_ReceiveDataIT(USART_Handle_t *pUSARTHandle,uint8_t *pRxBuffer, uint32_t Len);
+      |         ^~~~~~~~~~~~~~~~~~~
+../Src/stm32f407xx_usart_driver.c: In function 'USART_ReceiveDataIT':
+../Src/stm32f407xx_usart_driver.c:229:41: warning: assignment to 'uint8_t *' {aka 'unsigned char *'} from incompatible pointer type 'uint16_t *' {aka 'short unsigned int *'} [-Wincompatible-pointer-types]
+  229 |                 pUSARTHandle->pRxBuffer = pRxBuffer;
+      |                                         ^
+../Src/stm32f407xx_usart_driver.c: In function 'USART_IRQHandling':
+../Src/stm32f407xx_usart_driver.c:501:33: warning: variable 'temp3' set but not used [-Wunused-but-set-variable]
+  501 |         uint32_t temp1 , temp2, temp3;
+      |                                 ^~~~~
+../Src/stm32f407xx_usart_driver.c: In function 'USART_SendDataIT':
+../Src/stm32f407xx_usart_driver.c:219:1: warning: control reaches end of non-void function [-Wreturn-type]
+  219 | }
+      | ^
+make: *** [Src/subdir.mk:34: Src/stm32f407xx_usart_driver.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+21:30:14 **** Incremental Build of configuration Debug for project bluetooth ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/stm32f407xx_gpio_drvier.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/stm32f407xx_gpio_drvier.d" -MT"Src/stm32f407xx_gpio_drvier.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/stm32f407xx_gpio_drvier.o"
+arm-none-eabi-gcc "../Src/stm32f407xx_rcc_driver.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/stm32f407xx_rcc_driver.d" -MT"Src/stm32f407xx_rcc_driver.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/stm32f407xx_rcc_driver.o"
+arm-none-eabi-gcc "../Src/stm32f407xx_usart_driver.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/stm32f407xx_usart_driver.d" -MT"Src/stm32f407xx_usart_driver.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/stm32f407xx_usart_driver.o"
+../Src/main.c: In function 'main':
+../Src/main.c:115:60: warning: passing argument 2 of 'USART_ReceiveDataIT' makes pointer from integer without a cast [-Wint-conversion]
+  115 |                 while ( USART_ReceiveDataIT(&usart2_handle,rx_buff,1) != USART_READY );
+      |                                                            ^~~~~~~
+      |                                                            |
+      |                                                            uint16_t {aka short unsigned int}
+In file included from ../Inc/stm32f407xx.h:614,
+                 from ../Src/main.c:22:
+../Inc/stm32f407xx_usart_driver.h:151:68: note: expected 'uint16_t *' {aka 'short unsigned int *'} but argument is of type 'uint16_t' {aka 'short unsigned int'}
+  151 | uint8_t USART_ReceiveDataIT(USART_Handle_t *pUSARTHandle,uint16_t *pRxBuffer, uint32_t Len);
+      |                                                          ~~~~~~~~~~^~~~~~~~~
+../Src/stm32f407xx_usart_driver.c: In function 'USART_ReceiveDataIT':
+../Src/stm32f407xx_usart_driver.c:229:41: warning: assignment to 'uint8_t *' {aka 'unsigned char *'} from incompatible pointer type 'uint16_t *' {aka 'short unsigned int *'} [-Wincompatible-pointer-types]
+  229 |                 pUSARTHandle->pRxBuffer = pRxBuffer;
+      |                                         ^
+../Src/stm32f407xx_usart_driver.c: In function 'USART_IRQHandling':
+../Src/stm32f407xx_usart_driver.c:501:33: warning: variable 'temp3' set but not used [-Wunused-but-set-variable]
+  501 |         uint32_t temp1 , temp2, temp3;
+      |                                 ^~~~~
+../Src/stm32f407xx_usart_driver.c: In function 'USART_SendDataIT':
+../Src/stm32f407xx_usart_driver.c:219:1: warning: control reaches end of non-void function [-Wreturn-type]
+  219 | }
+      | ^
+arm-none-eabi-gcc -o "bluetooth.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\tjdtj\OneDrive\Documents\GitHub\Practice-STM32-UART-Bluetooth\target\bluetooth\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="bluetooth.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: bluetooth.elf
+ 
+arm-none-eabi-size  bluetooth.elf 
+arm-none-eabi-objdump -h -S bluetooth.elf  > "bluetooth.list"
+   text	   data	    bss	    dec	    hex	filename
+   4636	     28	   1604	   6268	   187c	bluetooth.elf
+Finished building: default.size.stdout
+ 
+Finished building: bluetooth.list
+ 
+21:32:38 **** Incremental Build of configuration Debug for project bluetooth ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/stm32f407xx_usart_driver.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/stm32f407xx_usart_driver.d" -MT"Src/stm32f407xx_usart_driver.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/stm32f407xx_usart_driver.o"
+../Src/stm32f407xx_usart_driver.c:222:9: error: conflicting types for 'USART_ReceiveDataIT'; have 'uint8_t(USART_Handle_t *, uint8_t *, uint32_t)' {aka 'unsigned char(USART_Handle_t *, unsigned char *, long unsigned int)'}
+  222 | uint8_t USART_ReceiveDataIT(USART_Handle_t *pUSARTHandle,uint8_t *pRxBuffer, uint32_t Len)
+      |         ^~~~~~~~~~~~~~~~~~~
+In file included from ../Src/stm32f407xx_usart_driver.c:7:
+../Inc/stm32f407xx_usart_driver.h:151:9: note: previous declaration of 'USART_ReceiveDataIT' with type 'uint8_t(USART_Handle_t *, uint16_t *, uint32_t)' {aka 'unsigned char(USART_Handle_t *, short unsigned int *, long unsigned int)'}
+  151 | uint8_t USART_ReceiveDataIT(USART_Handle_t *pUSARTHandle,uint16_t *pRxBuffer, uint32_t Len);
+      |         ^~~~~~~~~~~~~~~~~~~
+../Src/stm32f407xx_usart_driver.c: In function 'USART_IRQHandling':
+../Src/stm32f407xx_usart_driver.c:501:33: warning: variable 'temp3' set but not used [-Wunused-but-set-variable]
+  501 |         uint32_t temp1 , temp2, temp3;
+      |                                 ^~~~~
+../Src/stm32f407xx_usart_driver.c: In function 'USART_SendDataIT':
+../Src/stm32f407xx_usart_driver.c:219:1: warning: control reaches end of non-void function [-Wreturn-type]
+  219 | }
+      | ^
+make: *** [Src/subdir.mk:34: Src/stm32f407xx_usart_driver.o] Error 1
+make: *** Waiting for unfinished jobs....
+../Src/main.c: In function 'main':
+../Src/main.c:115:60: warning: passing argument 2 of 'USART_ReceiveDataIT' makes pointer from integer without a cast [-Wint-conversion]
+  115 |                 while ( USART_ReceiveDataIT(&usart2_handle,rx_buff,1) != USART_READY );
+      |                                                            ^~~~~~~
+      |                                                            |
+      |                                                            uint8_t {aka unsigned char}
+In file included from ../Inc/stm32f407xx.h:614,
+                 from ../Src/main.c:22:
+../Inc/stm32f407xx_usart_driver.h:151:68: note: expected 'uint16_t *' {aka 'short unsigned int *'} but argument is of type 'uint8_t' {aka 'unsigned char'}
+  151 | uint8_t USART_ReceiveDataIT(USART_Handle_t *pUSARTHandle,uint16_t *pRxBuffer, uint32_t Len);
+      |                                                          ~~~~~~~~~~^~~~~~~~~
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+21:32:51 **** Incremental Build of configuration Debug for project bluetooth ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/stm32f407xx_gpio_drvier.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/stm32f407xx_gpio_drvier.d" -MT"Src/stm32f407xx_gpio_drvier.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/stm32f407xx_gpio_drvier.o"
+arm-none-eabi-gcc "../Src/stm32f407xx_rcc_driver.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/stm32f407xx_rcc_driver.d" -MT"Src/stm32f407xx_rcc_driver.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/stm32f407xx_rcc_driver.o"
+arm-none-eabi-gcc "../Src/stm32f407xx_usart_driver.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/stm32f407xx_usart_driver.d" -MT"Src/stm32f407xx_usart_driver.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/stm32f407xx_usart_driver.o"
+../Src/main.c: In function 'main':
+../Src/main.c:115:60: warning: passing argument 2 of 'USART_ReceiveDataIT' makes pointer from integer without a cast [-Wint-conversion]
+  115 |                 while ( USART_ReceiveDataIT(&usart2_handle,rx_buff,1) != USART_READY );
+      |                                                            ^~~~~~~
+      |                                                            |
+      |                                                            uint8_t {aka unsigned char}
+In file included from ../Inc/stm32f407xx.h:614,
+                 from ../Src/main.c:22:
+../Inc/stm32f407xx_usart_driver.h:151:67: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'uint8_t' {aka 'unsigned char'}
+  151 | uint8_t USART_ReceiveDataIT(USART_Handle_t *pUSARTHandle,uint8_t *pRxBuffer, uint32_t Len);
+      |                                                          ~~~~~~~~~^~~~~~~~~
+../Src/stm32f407xx_usart_driver.c: In function 'USART_IRQHandling':
+../Src/stm32f407xx_usart_driver.c:501:33: warning: variable 'temp3' set but not used [-Wunused-but-set-variable]
+  501 |         uint32_t temp1 , temp2, temp3;
+      |                                 ^~~~~
+../Src/stm32f407xx_usart_driver.c: In function 'USART_SendDataIT':
+../Src/stm32f407xx_usart_driver.c:219:1: warning: control reaches end of non-void function [-Wreturn-type]
+  219 | }
+      | ^
+arm-none-eabi-gcc -o "bluetooth.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\tjdtj\OneDrive\Documents\GitHub\Practice-STM32-UART-Bluetooth\target\bluetooth\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="bluetooth.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: bluetooth.elf
+ 
+arm-none-eabi-size  bluetooth.elf 
+arm-none-eabi-objdump -h -S bluetooth.elf  > "bluetooth.list"
+   text	   data	    bss	    dec	    hex	filename
+   4636	     28	   1604	   6268	   187c	bluetooth.elf
+Finished building: default.size.stdout
+ 
+Finished building: bluetooth.list
+ 
+21:34:35 **** Incremental Build of configuration Debug for project bluetooth ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "bluetooth.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\tjdtj\OneDrive\Documents\GitHub\Practice-STM32-UART-Bluetooth\target\bluetooth\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="bluetooth.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: bluetooth.elf
+ 
+arm-none-eabi-size  bluetooth.elf 
+arm-none-eabi-objdump -h -S bluetooth.elf  > "bluetooth.list"
+   text	   data	    bss	    dec	    hex	filename
+   4632	     28	   1612	   6272	   1880	bluetooth.elf
+Finished building: default.size.stdout
+ 
+Finished building: bluetooth.list
+ 

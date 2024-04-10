@@ -26,7 +26,7 @@
 #endif
 
 USART_Handle_t usart2_handle;
-uint8_t rx_buff[10];
+uint8_t rx_buff[1024];
 uint8_t rxCmplt = RESET;
 
 void GPIO_LEDInit(void)
@@ -120,7 +120,7 @@ int main(void)
 
 void USART2_IRQHandler(void)
 {
-//	memset(rx_buff, 0, sizeof(rx_buff));
+	memset(rx_buff, 0, sizeof(rx_buff));
 
 	USART_IRQHandling(&usart2_handle);
 
