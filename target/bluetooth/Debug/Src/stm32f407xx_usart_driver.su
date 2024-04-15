@@ -11,4 +11,4 @@
 ../Src/stm32f407xx_usart_driver.c:433:6:USART_IRQInterruptConfig	16	static
 ../Src/stm32f407xx_usart_driver.c:486:6:USART_IRQPriorityConfig	24	static
 ../Src/stm32f407xx_usart_driver.c:498:6:USART_IRQHandling	32	static
-../Src/stm32f407xx_usart_driver.c:797:13:USART_ApplicationEventCallback	16	static
+../Src/stm32f407xx_usart_driver.c:799:13:USART_ApplicationEventCallback	16	static

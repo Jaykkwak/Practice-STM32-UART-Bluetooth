@@ -26,8 +26,8 @@
 #endif
 
 USART_Handle_t usart2_handle;
-uint8_t rx_buff[10];
-uint8_t rxCmplt = RESET;
+uint8_t rx_buff[100];
+uint8_t rxCmplt = SET;
 
 void GPIO_LEDInit(void)
 {
@@ -86,13 +86,14 @@ void USART2_Init(void)
 	usart2_handle.USART_Config.USART_NoOfStopBits = USART_STOPBITS_1;
 	usart2_handle.USART_Config.USART_WordLength = USART_WORDLEN_8BITS;
 	usart2_handle.USART_Config.USART_ParityControl = USART_PARITY_DISABLE;
+	usart2_handle.RxBusyState = USART_READY;
 	USART_Init(&usart2_handle);
 }
 
 
 void delay(void)
 {
-	for(uint32_t i = 0 ; i < 500000/2 ; i ++);
+	for(uint32_t i = 0 ; i < 500000 ; i ++);
 }
 
 int main(void)
@@ -105,44 +106,52 @@ int main(void)
 
 	USART_IRQInterruptConfig(IRQ_NO_USART2, ENABLE);
 
-	USART_IRQPriorityConfig(IRQ_NO_USART2, 0);
+	//USART_IRQPriorityConfig(IRQ_NO_USART2, 0);
 
 	USART_PeripheralControl(USART2,ENABLE);
 
+	//USART_ReceiveDataIT(&usart2_handle,rx_buff,10);
+
 	while(1){
+		delay();
 		//First lets enable the reception in interrupt mode
 		//this code enables the receive interrupt
-		while ( USART_ReceiveDataIT(&usart2_handle,rx_buff,1) != USART_READY );
-	}
+		while ( USART_ReceiveDataIT(&usart2_handle,rx_buff, 50) != USART_READY );
+		while(rxCmplt != SET);
 
+		if(strcmp((char *)rx_buff, "Hi.") == 0){
+			GPIO_WriteToOutputPin(GPIOD, GPIO_PIN_NO_0, GPIO_PIN_SET);
+			delay();
+			GPIO_WriteToOutputPin(GPIOD, GPIO_PIN_NO_0, GPIO_PIN_RESET);
+		}
+		else if(strcmp((char *)rx_buff, "Bye.") == 0){
+			GPIO_WriteToOutputPin(GPIOD, GPIO_PIN_NO_1, GPIO_PIN_SET);
+			delay();
+			GPIO_WriteToOutputPin(GPIOD, GPIO_PIN_NO_1, GPIO_PIN_RESET);
+		}else if(strcmp((char *)rx_buff, "See you.") == 0){
+			GPIO_WriteToOutputPin(GPIOD, GPIO_PIN_NO_2, GPIO_PIN_SET);
+			delay();
+			GPIO_WriteToOutputPin(GPIOD, GPIO_PIN_NO_2, GPIO_PIN_RESET);
+		}
+		else{
+			GPIO_WriteToOutputPin(GPIOD, GPIO_PIN_NO_3, GPIO_PIN_SET);
+			delay();
+			GPIO_WriteToOutputPin(GPIOD, GPIO_PIN_NO_3, GPIO_PIN_RESET);
+		}
+
+		memset(rx_buff, 0, sizeof(rx_buff));
+
+		rxCmplt = RESET;
+	}
 }
 
 
 void USART2_IRQHandler(void)
 {
-//	memset(rx_buff, 0, sizeof(rx_buff));
+
 
 	USART_IRQHandling(&usart2_handle);
 
-	if(*rx_buff =='A'){
-		GPIO_WriteToOutputPin(GPIOD, GPIO_PIN_NO_0, GPIO_PIN_SET);
-		delay();
-		GPIO_WriteToOutputPin(GPIOD, GPIO_PIN_NO_0, GPIO_PIN_RESET);
-	}
-	else if(*rx_buff == 'B'){
-		GPIO_WriteToOutputPin(GPIOD, GPIO_PIN_NO_1, GPIO_PIN_SET);
-		delay();
-		GPIO_WriteToOutputPin(GPIOD, GPIO_PIN_NO_1, GPIO_PIN_RESET);
-	}else if(*rx_buff == 'C'){
-		GPIO_WriteToOutputPin(GPIOD, GPIO_PIN_NO_2, GPIO_PIN_SET);
-		delay();
-		GPIO_WriteToOutputPin(GPIOD, GPIO_PIN_NO_2, GPIO_PIN_RESET);
-	}
-	else{
-		GPIO_WriteToOutputPin(GPIOD, GPIO_PIN_NO_3, GPIO_PIN_SET);
-		delay();
-		GPIO_WriteToOutputPin(GPIOD, GPIO_PIN_NO_3, GPIO_PIN_RESET);
-	}
 }
 
 void USART_ApplicationEventCallback( USART_Handle_t *pUSARTHandle,uint8_t ApEv)

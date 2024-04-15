@@ -665,19 +665,21 @@ void USART_IRQHandling(USART_Handle_t *pUSARTHandle)
 					}
 
 					//Now , increment the pRxBuffer
-					pUSARTHandle->pRxBuffer++;
-					 pUSARTHandle->RxLen-=1;
+					//pUSARTHandle->pRxBuffer++;
+					pUSARTHandle->RxLen-=1;
 				}
 
 
 			}//if of >0
 
-			if(! pUSARTHandle->RxLen)
+			if(*pUSARTHandle->pRxBuffer == '.')
 			{
 				//disable the rxne
 				pUSARTHandle->pUSARTx->CR1 &= ~( 1 << USART_CR1_RXNEIE );
 				pUSARTHandle->RxBusyState = USART_READY;
 				USART_ApplicationEventCallback(pUSARTHandle,USART_EVENT_RX_CMPLT);
+			}else{
+				pUSARTHandle->pRxBuffer++;
 			}
 		}
 	}
